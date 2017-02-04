@@ -1,20 +1,22 @@
 PODS:
-  - AppRTC (1.0.2):
-    - libjingle_peerconnection
+  - AppRTC (1.0.3):
     - SocketRocket
-  - libjingle_peerconnection (10642.2.0)
-  - SocketRocket (0.4.2)
+    - WebRTC (~> 57.0.0)
+  - SocketRocket (0.5.1)
+  - WebRTC (57.0.0)
 
 DEPENDENCIES:
   - AppRTC (from `.`)
 
 EXTERNAL SOURCES:
   AppRTC:
-    :path: .
+    :path: "."
 
 SPEC CHECKSUMS:
-  AppRTC: 29a5418955fee7fba3df36a0c37285cd835272ad
-  libjingle_peerconnection: 96592d7e75876776f6a7c21267926a132effc3cc
-  SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
+  AppRTC: cb34bdd6a963da0c8c64cd8c091143d21b75d9e3
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  WebRTC: '08eda467ecb83013485e5561f9ec1aa61a367178'
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: de09d8bd46b32db95079b537924b1deec7afacd6
+
+COCOAPODS: 1.2.0

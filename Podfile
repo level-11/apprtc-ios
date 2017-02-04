@@ -1,5 +1,8 @@
-source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:level-11/CocoaPods-Specs.git'
+source 'https://github.com/CocoaPods/Specs/'
 
-platform :ios, '7.0'
+use_frameworks!
 
-pod 'AppRTC', path: '.'
+target 'AppRTC' do
+  pod 'AppRTC', :path => '.'
+end
