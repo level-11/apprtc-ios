@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name               = "AppRTC"
-  s.version            = "1.0.3"
+  s.version            = "1.0.4"
   s.summary            = "iOS video chat based on WebRTC"
   s.homepage           = "https://github.com/ISBX/apprtc-ios"
   s.author             = "ISBX"
@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
   s.frameworks         = "QuartzCore", "OpenGLES", "CoreGraphics", "CoreVideo", "CoreMedia", "CoreAudio", "AVFoundation", "AudioToolbox", "GLKit", "CFNetwork", "Security"
   s.libraries          = "sqlite3", "stdc++.6", "icucore", "c++"
   s.dependency "SocketRocket"
-  s.dependency "WebRTC", '~> 57.0.0'
+  s.dependency "WebRTC"
 end

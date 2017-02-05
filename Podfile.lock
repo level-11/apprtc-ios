@@ -1,9 +1,9 @@
 PODS:
   - AppRTC (1.0.3):
     - SocketRocket
-    - WebRTC (~> 57.0.0)
+    - WebRTC
   - SocketRocket (0.5.1)
-  - WebRTC (57.0.0)
+  - WebRTC (57.0.1)
 
 DEPENDENCIES:
   - AppRTC (from `.`)
@@ -13,9 +13,9 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  AppRTC: cb34bdd6a963da0c8c64cd8c091143d21b75d9e3
+  AppRTC: 174ffe8440ef051c4fbfd0f7f1edd391053b38e8
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
-  WebRTC: '08eda467ecb83013485e5561f9ec1aa61a367178'
+  WebRTC: 18c442e11e4323f44fb783227e1519c5cc944089
 
 PODFILE CHECKSUM: de09d8bd46b32db95079b537924b1deec7afacd6
 
