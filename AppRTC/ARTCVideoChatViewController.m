@@ -62,8 +62,13 @@
     //Connect to the room
     [self disconnect];
     self.client = [[ARDAppClient alloc] initWithDelegate:self];
-    [self.client setServerHostUrl:SERVER_HOST_URL];
-    [self.client connectToRoomWithId:self.roomName options:nil];
+    
+    [self.client
+     connectToRoomWithId:self.roomName
+     isLoopback:false
+     isAudioOnly:false
+     shouldMakeAecDump:false
+     shouldUseLevelControl:true];
     
     [self.urlLabel setText:self.roomUrl];
 }
