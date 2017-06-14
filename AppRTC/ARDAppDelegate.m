@@ -8,14 +8,17 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-#import "AppDelegate.h"
+#import "ARDAppDelegate.h"
 
 #import "WebRTC/RTCFieldTrials.h"
 #import "WebRTC/RTCLogging.h"
 #import "WebRTC/RTCSSLAdapter.h"
 #import "WebRTC/RTCTracing.h"
 
-@implementation AppDelegate {
+#import "ARDMainViewController.h"
+
+@implementation ARDAppDelegate {
+    UIWindow *_window;
 }
 
 #pragma mark - UIApplicationDelegate methods
@@ -23,12 +26,19 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSDictionary *fieldTrials = @{
-                                  kRTCFieldTrialImprovedBitrateEstimateKey: kRTCFieldTrialEnabledValue,
                                   kRTCFieldTrialH264HighProfileKey: kRTCFieldTrialEnabledValue,
                                   };
     RTCInitFieldTrialDictionary(fieldTrials);
     RTCInitializeSSL();
     RTCSetupInternalTracer();
+    _window =  [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [_window makeKeyAndVisible];
+    ARDMainViewController *viewController = [[ARDMainViewController alloc] init];
+    
+    UINavigationController *root =
+    [[UINavigationController alloc] initWithRootViewController:viewController];
+    root.navigationBar.translucent = NO;
+    _window.rootViewController = root;
     
 #if defined(NDEBUG)
     // In debug builds the default level is LS_INFO and in non-debug builds it is

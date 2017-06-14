@@ -8,14 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		5C80AA7C1AAB5DF300F21FFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AA7B1AAB5DF300F21FFA /* main.m */; };
-		5C80AA7F1AAB5DF300F21FFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AA7E1AAB5DF300F21FFA /* AppDelegate.m */; };
+		5C80AA7F1AAB5DF300F21FFA /* ARDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AA7E1AAB5DF300F21FFA /* ARDAppDelegate.m */; };
 		5C80AA851AAB5DF300F21FFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C80AA831AAB5DF300F21FFA /* Main.storyboard */; };
 		5C80AA871AAB5DF300F21FFA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C80AA861AAB5DF300F21FFA /* Images.xcassets */; };
 		5C80AA8A1AAB5DF300F21FFA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C80AA881AAB5DF300F21FFA /* LaunchScreen.xib */; };
-		5C80AAA11AAB717100F21FFA /* ARTCRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AAA01AAB717100F21FFA /* ARTCRoomViewController.m */; };
-		5C80AAA61AAB71C700F21FFA /* ARTCVideoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AAA51AAB71C700F21FFA /* ARTCVideoChatViewController.m */; };
-		5C80AAAA1AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C80AAA91AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m */; };
 		71EEDD6C090BA971946F40DA /* Pods_AppRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8904495F6B62D92257555A9 /* Pods_AppRTC.framework */; };
+		FCF77F201EF1DBFF000E6CC3 /* ARDMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF77F1F1EF1DBFF000E6CC3 /* ARDMainView.m */; };
+		FCF77F231EF1DC0A000E6CC3 /* ARDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF77F221EF1DC0A000E6CC3 /* ARDMainViewController.m */; };
+		FCF77F261EF1DC11000E6CC3 /* ARDSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF77F251EF1DC11000E6CC3 /* ARDSettingsViewController.m */; };
+		FCF77F291EF1DC18000E6CC3 /* ARDStatsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF77F281EF1DC18000E6CC3 /* ARDStatsView.m */; };
+		FCF77F2C1EF1DC20000E6CC3 /* ARDVideoCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF77F2B1EF1DC20000E6CC3 /* ARDVideoCallView.m */; };
+		FCF77F2F1EF1DC2F000E6CC3 /* ARDVideoCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF77F2E1EF1DC2F000E6CC3 /* ARDVideoCallViewController.m */; };
+		FCF77F321EF1DC54000E6CC3 /* UIImage+ARDUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF77F311EF1DC54000E6CC3 /* UIImage+ARDUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,19 +40,27 @@
 		5C80AA761AAB5DF300F21FFA /* AppRTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C80AA7A1AAB5DF300F21FFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C80AA7B1AAB5DF300F21FFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5C80AA7D1AAB5DF300F21FFA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5C80AA7E1AAB5DF300F21FFA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C80AA7D1AAB5DF300F21FFA /* ARDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARDAppDelegate.h; sourceTree = "<group>"; };
+		5C80AA7E1AAB5DF300F21FFA /* ARDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARDAppDelegate.m; sourceTree = "<group>"; };
 		5C80AA841AAB5DF300F21FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C80AA861AAB5DF300F21FFA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C80AA891AAB5DF300F21FFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		5C80AA9F1AAB717100F21FFA /* ARTCRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCRoomViewController.h; sourceTree = "<group>"; };
-		5C80AAA01AAB717100F21FFA /* ARTCRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCRoomViewController.m; sourceTree = "<group>"; };
-		5C80AAA41AAB71C700F21FFA /* ARTCVideoChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCVideoChatViewController.h; sourceTree = "<group>"; };
-		5C80AAA51AAB71C700F21FFA /* ARTCVideoChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCVideoChatViewController.m; sourceTree = "<group>"; };
-		5C80AAA81AAB788A00F21FFA /* ARTCRoomTextInputViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTCRoomTextInputViewCell.h; sourceTree = "<group>"; };
-		5C80AAA91AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTCRoomTextInputViewCell.m; sourceTree = "<group>"; };
 		A8904495F6B62D92257555A9 /* Pods_AppRTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C13FA35A51D0765C943D2B64 /* Pods-AppRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AppRTC/Pods-AppRTC.debug.xcconfig"; sourceTree = "<group>"; };
+		FCF77F1E1EF1DBFF000E6CC3 /* ARDMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDMainView.h; sourceTree = "<group>"; };
+		FCF77F1F1EF1DBFF000E6CC3 /* ARDMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDMainView.m; sourceTree = "<group>"; };
+		FCF77F211EF1DC0A000E6CC3 /* ARDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDMainViewController.h; sourceTree = "<group>"; };
+		FCF77F221EF1DC0A000E6CC3 /* ARDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDMainViewController.m; sourceTree = "<group>"; };
+		FCF77F241EF1DC11000E6CC3 /* ARDSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDSettingsViewController.h; sourceTree = "<group>"; };
+		FCF77F251EF1DC11000E6CC3 /* ARDSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDSettingsViewController.m; sourceTree = "<group>"; };
+		FCF77F271EF1DC18000E6CC3 /* ARDStatsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDStatsView.h; sourceTree = "<group>"; };
+		FCF77F281EF1DC18000E6CC3 /* ARDStatsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDStatsView.m; sourceTree = "<group>"; };
+		FCF77F2A1EF1DC20000E6CC3 /* ARDVideoCallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDVideoCallView.h; sourceTree = "<group>"; };
+		FCF77F2B1EF1DC20000E6CC3 /* ARDVideoCallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDVideoCallView.m; sourceTree = "<group>"; };
+		FCF77F2D1EF1DC2F000E6CC3 /* ARDVideoCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDVideoCallViewController.h; sourceTree = "<group>"; };
+		FCF77F2E1EF1DC2F000E6CC3 /* ARDVideoCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDVideoCallViewController.m; sourceTree = "<group>"; };
+		FCF77F301EF1DC54000E6CC3 /* UIImage+ARDUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ARDUtilities.h"; sourceTree = "<group>"; };
+		FCF77F311EF1DC54000E6CC3 /* UIImage+ARDUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ARDUtilities.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,8 @@
 		5C80AA781AAB5DF300F21FFA /* AppRTC */ = {
 			isa = PBXGroup;
 			children = (
+				FCF77F301EF1DC54000E6CC3 /* UIImage+ARDUtilities.h */,
+				FCF77F311EF1DC54000E6CC3 /* UIImage+ARDUtilities.m */,
 				5C80AAA21AAB718200F21FFA /* App */,
 				5C80AAA31AAB718700F21FFA /* ViewControllers */,
 				5C80AAA71AAB786200F21FFA /* Views */,
@@ -112,8 +126,8 @@
 		5C80AAA21AAB718200F21FFA /* App */ = {
 			isa = PBXGroup;
 			children = (
-				5C80AA7D1AAB5DF300F21FFA /* AppDelegate.h */,
-				5C80AA7E1AAB5DF300F21FFA /* AppDelegate.m */,
+				5C80AA7D1AAB5DF300F21FFA /* ARDAppDelegate.h */,
+				5C80AA7E1AAB5DF300F21FFA /* ARDAppDelegate.m */,
 				5C80AA831AAB5DF300F21FFA /* Main.storyboard */,
 				5C80AA861AAB5DF300F21FFA /* Images.xcassets */,
 				5C80AA881AAB5DF300F21FFA /* LaunchScreen.xib */,
@@ -124,10 +138,12 @@
 		5C80AAA31AAB718700F21FFA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5C80AA9F1AAB717100F21FFA /* ARTCRoomViewController.h */,
-				5C80AAA01AAB717100F21FFA /* ARTCRoomViewController.m */,
-				5C80AAA41AAB71C700F21FFA /* ARTCVideoChatViewController.h */,
-				5C80AAA51AAB71C700F21FFA /* ARTCVideoChatViewController.m */,
+				FCF77F241EF1DC11000E6CC3 /* ARDSettingsViewController.h */,
+				FCF77F251EF1DC11000E6CC3 /* ARDSettingsViewController.m */,
+				FCF77F211EF1DC0A000E6CC3 /* ARDMainViewController.h */,
+				FCF77F221EF1DC0A000E6CC3 /* ARDMainViewController.m */,
+				FCF77F2D1EF1DC2F000E6CC3 /* ARDVideoCallViewController.h */,
+				FCF77F2E1EF1DC2F000E6CC3 /* ARDVideoCallViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -135,8 +151,12 @@
 		5C80AAA71AAB786200F21FFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5C80AAA81AAB788A00F21FFA /* ARTCRoomTextInputViewCell.h */,
-				5C80AAA91AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m */,
+				FCF77F2A1EF1DC20000E6CC3 /* ARDVideoCallView.h */,
+				FCF77F2B1EF1DC20000E6CC3 /* ARDVideoCallView.m */,
+				FCF77F271EF1DC18000E6CC3 /* ARDStatsView.h */,
+				FCF77F281EF1DC18000E6CC3 /* ARDStatsView.m */,
+				FCF77F1E1EF1DBFF000E6CC3 /* ARDMainView.h */,
+				FCF77F1F1EF1DBFF000E6CC3 /* ARDMainView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -185,7 +205,7 @@
 				TargetAttributes = {
 					5C80AA751AAB5DF300F21FFA = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = MS9JF6U38B;
+						DevelopmentTeam = FH4W5R4AYT;
 					};
 				};
 			};
@@ -233,7 +253,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C5FE233ADF4066FE17663197 /* [CP] Embed Pods Frameworks */ = {
@@ -273,11 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C80AAAA1AAB788A00F21FFA /* ARTCRoomTextInputViewCell.m in Sources */,
-				5C80AAA61AAB71C700F21FFA /* ARTCVideoChatViewController.m in Sources */,
-				5C80AAA11AAB717100F21FFA /* ARTCRoomViewController.m in Sources */,
-				5C80AA7F1AAB5DF300F21FFA /* AppDelegate.m in Sources */,
+				FCF77F291EF1DC18000E6CC3 /* ARDStatsView.m in Sources */,
+				FCF77F2C1EF1DC20000E6CC3 /* ARDVideoCallView.m in Sources */,
+				5C80AA7F1AAB5DF300F21FFA /* ARDAppDelegate.m in Sources */,
 				5C80AA7C1AAB5DF300F21FFA /* main.m in Sources */,
+				FCF77F321EF1DC54000E6CC3 /* UIImage+ARDUtilities.m in Sources */,
+				FCF77F261EF1DC11000E6CC3 /* ARDSettingsViewController.m in Sources */,
+				FCF77F231EF1DC0A000E6CC3 /* ARDMainViewController.m in Sources */,
+				FCF77F2F1EF1DC2F000E6CC3 /* ARDVideoCallViewController.m in Sources */,
+				FCF77F201EF1DBFF000E6CC3 /* ARDMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +412,7 @@
 			baseConfigurationReference = C13FA35A51D0765C943D2B64 /* Pods-AppRTC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MS9JF6U38B;
+				DEVELOPMENT_TEAM = FH4W5R4AYT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppRTC/Frameworks",
@@ -409,7 +433,7 @@
 			baseConfigurationReference = 1C899AFFC1B830D33F149490 /* Pods-AppRTC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MS9JF6U38B;
+				DEVELOPMENT_TEAM = FH4W5R4AYT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AppRTC/Frameworks",
