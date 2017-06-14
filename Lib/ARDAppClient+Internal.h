@@ -11,6 +11,8 @@
 #import "ARDAppClient.h"
 
 #import "WebRTC/RTCPeerConnection.h"
+#import "WebRTC/RTCAudioSource.h"
+#import "WebRTC/RTCAudioTrack.h"
 
 #import "ARDRoomServerClient.h"
 #import "ARDSignalingChannel.h"
@@ -45,6 +47,10 @@
 @property(nonatomic, readonly) BOOL isAudioOnly;
 @property(nonatomic, readonly) BOOL shouldMakeAecDump;
 @property(nonatomic, readonly) BOOL shouldUseLevelControl;
+
+@property(nonatomic, strong) RTCAudioSource *rtcAudioSource;
+@property(nonatomic, strong) RTCAudioTrack *rtcAudioTrack;
+
 
 @property(nonatomic, strong)
     RTCMediaConstraints *defaultPeerConnectionConstraints;

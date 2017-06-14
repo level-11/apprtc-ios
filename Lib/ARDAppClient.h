@@ -84,4 +84,6 @@ typedef NS_ENUM(NSInteger, ARDAppClientState) {
 // Disconnects from the AppRTC servers and any connected clients.
 - (void)disconnect;
 
+- (void)setMute:(BOOL)mute;
+
 @end

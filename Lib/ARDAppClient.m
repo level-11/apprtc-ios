@@ -103,6 +103,8 @@ static int const kKbpsMultiplier = 1000;
   ARDTimerProxy *_statsTimer;
   ARDSettingsModel *_settings;
   RTCVideoTrack *_localVideoTrack;
+  RTCAudioSource *_rtcAudioSource;
+  RTCAudioTrack *_rtcAudioTrack;
 }
 
 @synthesize shouldGetStats = _shouldGetStats;
@@ -129,6 +131,8 @@ static int const kKbpsMultiplier = 1000;
 @synthesize isAudioOnly = _isAudioOnly;
 @synthesize shouldMakeAecDump = _shouldMakeAecDump;
 @synthesize shouldUseLevelControl = _shouldUseLevelControl;
+@synthesize rtcAudioSource = _rtcAudioSource;
+@synthesize rtcAudioTrack = _rtcAudioTrack;
 
 - (instancetype)init {
   return [self initWithDelegate:nil];
@@ -320,6 +324,10 @@ static int const kKbpsMultiplier = 1000;
     RTCStopInternalCapture();
   }
 #endif
+}
+
+- (void)setMute:(BOOL)mute {
+    _rtcAudioTrack.isEnabled = !mute;
 }
 
 #pragma mark - ARDSignalingChannelDelegate
@@ -703,13 +711,14 @@ static int const kKbpsMultiplier = 1000;
 
 - (RTCRtpSender *)createAudioSender {
   RTCMediaConstraints *constraints = [self defaultMediaAudioConstraints];
-  RTCAudioSource *source = [_factory audioSourceWithConstraints:constraints];
-  RTCAudioTrack *track = [_factory audioTrackWithSource:source
-                                                trackId:kARDAudioTrackId];
+  _rtcAudioSource = [_factory audioSourceWithConstraints:constraints];
+  _rtcAudioTrack = [_factory audioTrackWithSource:_rtcAudioSource
+                                          trackId:kARDAudioTrackId];
+
   RTCRtpSender *sender =
       [_peerConnection senderWithKind:kRTCMediaStreamTrackKindAudio
                              streamId:kARDMediaStreamId];
-  sender.track = track;
+  sender.track = _rtcAudioTrack;
   return sender;
 }
 
