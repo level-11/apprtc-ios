@@ -23,6 +23,8 @@
 #import "WebRTC/RTCRtpSender.h"
 #import "WebRTC/RTCTracing.h"
 #import "WebRTC/RTCVideoTrack.h"
+#import "WebRTC/RTCAudioSession.h"
+#import "WebRTC/RTCAudioSessionConfiguration.h"
 
 #import "ARDAppEngineClient.h"
 #import "ARDJoinResponse.h"
@@ -251,6 +253,9 @@ static int const kKbpsMultiplier = 1000;
     strongSelf.isTurnComplete = YES;
     [strongSelf startSignalingIfReady];
   }];
+    
+    
+  [self configureAudioSession];
 
   // Join room on room server.
   [_roomServerClient joinRoomWithRoomId:roomId
@@ -329,6 +334,30 @@ static int const kKbpsMultiplier = 1000;
 - (void)setMute:(BOOL)mute {
     _rtcAudioTrack.isEnabled = !mute;
 }
+
+- (void)configureAudioSession {
+    RTCAudioSessionConfiguration *configuration =
+    [[RTCAudioSessionConfiguration alloc] init];
+    configuration.category = AVAudioSessionCategoryPlayAndRecord;
+    configuration.mode = AVAudioSessionModeVideoChat;
+    
+    RTCAudioSession *session = [RTCAudioSession sharedInstance];
+    [session lockForConfiguration];
+    BOOL hasSucceeded = NO;
+    NSError *error = nil;
+    if (session.isActive) {
+        hasSucceeded = [session setConfiguration:configuration error:&error];
+    } else {
+        hasSucceeded = [session setConfiguration:configuration
+                                          active:YES
+                                           error:&error];
+    }
+    if (!hasSucceeded) {
+        RTCLogError(@"Error setting configuration: %@", error.localizedDescription);
+    }
+    [session unlockForConfiguration];
+}
+
 
 #pragma mark - ARDSignalingChannelDelegate
 
