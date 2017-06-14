@@ -253,8 +253,8 @@ static int const kKbpsMultiplier = 1000;
     strongSelf.isTurnComplete = YES;
     [strongSelf startSignalingIfReady];
   }];
-    
-    
+
+
   [self configureAudioSession];
 
   // Join room on room server.
@@ -336,11 +336,11 @@ static int const kKbpsMultiplier = 1000;
 }
 
 - (void)configureAudioSession {
-    RTCAudioSessionConfiguration *configuration =
-    [[RTCAudioSessionConfiguration alloc] init];
+    RTCAudioSessionConfiguration *configuration = RTCAudioSessionConfiguration.webRTCConfiguration;
+    
     configuration.category = AVAudioSessionCategoryPlayAndRecord;
     configuration.mode = AVAudioSessionModeVideoChat;
-    
+
     RTCAudioSession *session = [RTCAudioSession sharedInstance];
     [session lockForConfiguration];
     BOOL hasSucceeded = NO;
